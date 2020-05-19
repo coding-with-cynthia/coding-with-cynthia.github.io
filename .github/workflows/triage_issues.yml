@@ -28,4 +28,4 @@ jobs:
               column_id: process.env.COLUMN_ID,
               content_id: context.payload.issue.id,
               content_type: "Issue"
-            )};
+            });
