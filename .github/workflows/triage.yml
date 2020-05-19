@@ -5,18 +5,18 @@ on:
     types: [opened, reopened]
     
 jobs:
-  comment:
+  triage:
     runs-on: ubuntu-latest
     steps:
     - name: Add issue to triage column
-      uses: actions/github-script@0.8.0
+      uses: actions/github-script@v1
       env: 
-        columnid: 9263836
+        COLUMN_ID: 9263836
       with: 
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
             github.projects.createCard({
-            column_id: process.env.columnid,
-            content_id: context.payload.issue.id,
-            content_type: "Issue"
+              column_id: process.env.COLUMN_ID,
+              content_id: context.payload.issue.id,
+              content_type: "Issue"
             });
