@@ -14,3 +14,4 @@ jobs:
        with: 
          node-version: '12.x'
      - run: npx html-validate index.html
+     - run: npx standard --env jquery
