@@ -11,7 +11,7 @@ jobs:
     - name: Add issue to triage column
       uses: actions/github-script@v1
       env: 
-        COLUMN_ID: 9263836
+        COLUMN_ID: 9264804
       with: 
         github-token: ${{ secrets.GITHUB_TOKEN }}
         script: |
