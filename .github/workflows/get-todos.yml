@@ -1,0 +1,19 @@
+name: TODO Issue Maker
+
+on: [push]
+
+jobs:
+  todo:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: TODO to Issue
+      uses: alstr/todo-to-issue-action@v1.1.2-beta
+      with:
+        REPO: ${{ github.repository }}
+        BEFORE: ${{ github.event.before }}
+        SHA: ${{ github.sha }}
+        TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        LABEL: "// TODO"
+        COMMENT: "//"
+      id: "todo_js"
