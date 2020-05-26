@@ -2,7 +2,7 @@ name: Stale bot
 
 on:
   schedule:
-  - cron: "0 0 * * *"
+  - cron: "30 21 * * *"
 
 jobs:
   stale:
@@ -13,7 +13,7 @@ jobs:
         repo-token: ${{ secrets.GITHUB_TOKEN }}
         stale-issue-message: This issue has automatically been marked as stale since it hasn't had activity for 30 days. Either comment below to keep it open or close this issue!
         stale-pr-message: This pull request has automatically been marked as stale since it hasn't had activity for 30 days. Either comment below to keep it open or close this pull request!
-        days-before-stale: 14
+        days-before-stale: 6
         days-before-close: 5
         exempt-issue-labels: 'tracking-issue,work-in-progress'
         exempt-pr-labels: 'draft,awaiting-approval'
