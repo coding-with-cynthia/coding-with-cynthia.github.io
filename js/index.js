@@ -11,8 +11,7 @@ const getProjects = () => {
       const cardHead = $('<h5>').attr('class', 'card-header').text(proj.name)
       const cardBodyDiv = $('<div>').attr('class', 'card-body')
       const desc = $('<p>').attr('class', 'card-text').text(proj.description)
-      // TODO: This should be a star icon, not a heart
-      const stars = $('<div>').attr('class', 'card-text').append($('<i>').attr('class', 'fas fa-heart')).append($('<span>').attr('class', 'ml-2').text(proj.stargazers_count))
+      const stars = $('<div>').attr('class', 'card-text').append($('<i>').attr('class', 'fas fa-star')).append($('<span>').attr('class', 'ml-2').text(proj.stargazers_count))
       const link = $('<a>').attr('href', proj.html_url).attr('class', 'btn btn-primary mt-2').text('View on GitHub')
       cardBodyDiv.append(desc)
       cardBodyDiv.append(stars)
