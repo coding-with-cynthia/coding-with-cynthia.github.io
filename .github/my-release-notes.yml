@@ -1,0 +1,20 @@
+categories:
+  - title: ':rocket: Features'
+    labels:
+      - 'feature'
+  - title: ':bug: Bug Fixes'
+    labels:
+      - 'bug'
+      - 'bug-fix'
+exclude-labels:
+  - 'no-changelog'
+change-template: '- $TITLE @$AUTHOR (#$NUMBER)'
+template: |
+  ## Changes
+  
+  $CHANGES
+  
+  ### Contributors
+  A huge thanks to the following users who contributed to this release
+  
+  $CONTRIBUTORS
